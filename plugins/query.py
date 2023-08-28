@@ -526,23 +526,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
 
     elif query.data == "start":                        
         buttons = [[
-                    InlineKeyboardButton("🎬 MAIN CHANNEL 🎬", url="https://t.me/+gqpU_4qsYAFmY2U1")
+                    InlineKeyboardButton("🎬 MAIN CHANNEL 🎬", url="https://t.me/+kXF6rEYdWlwwYjVl")
                 ],
                 [
-                    InlineKeyboardButton("📽️ MOVIE REQUEST GROUP 📽️", url="https://t.me/+EGBu5vb1vo9jMDE1")
+                    InlineKeyboardButton("📽️ MOVIE REQUEST GROUP 📽️", url="https://t.me/+XDeQ9s4UdPYyZDc1")
                 ],
                 [
-                    InlineKeyboardButton("🎬 UHD MOVIES/SERIES 🎬", url="https://t.me/+abo3FyAP1hE5MTI9")
+                    InlineKeyboardButton("📽️ BACKUP CHANNEL 📽️", url="https://t.me/+QYEOQkBhwowyYTNl")
                 ],
                 [
-                    InlineKeyboardButton("😎 MORE FROM US 📢", callback_data = "morefromus")
-                ],
-                [
-                    InlineKeyboardButton("📽️ BACKUP CHANNEL 📽️", url="https://t.me/+b8RpV89fK11kMTY9")
-                ],
-                [
-                    InlineKeyboardButton("🔉 DISCUSSION 🔉", url="https://t.me/+YcSmRvCe9xs0YjU1"),
-                    InlineKeyboardButton("❔ HELP ❓", url="https://t.me/+YcSmRvCe9xs0YjU1")
+                    InlineKeyboardButton("❕ ABOUT ❗", callback_data = "about"),
+                    InlineKeyboardButton("🔒 CLOSE 🔒", callback_data = "close")
                 ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.edit_message_media(
@@ -644,6 +638,13 @@ async def cb_handler(client: Client, query: CallbackQuery):
             InputMediaPhoto(random.choice(PICS), script.ABOUT_TXT.format(temp.B_NAME), enums.ParseMode.HTML),
             reply_markup=reply_markup,           
         )
+    elif query.data == "about":
+        buttons= [[
+            InlineKeyboardButton('❣️ 𝚂𝙾𝚄𝚁𝙲𝙴 𝙲𝙾𝙳𝙴 ❣️', callback_data='source')
+            ],[
+            InlineKeyboardButton('🏠 𝙷𝙾𝙼𝙴 🏠', callback_data='start'),
+            InlineKeyboardButton('🔐 𝙲𝙻𝙾𝚂𝙴 🔐', callback_data='close_data')
+        ]]
     elif query.data == "source":
         buttons = [[
             InlineKeyboardButton('SOURCE CODE', url='https://t.me/ridzy96')
